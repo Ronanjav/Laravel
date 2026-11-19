@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Student Registration Form</h1>
+        <p>Sign up to join the school club. All fields except the reason are required.</p>
+
+        <form method="get">
+            <label for="student-name">Full name</label>
+            <input type="text" id="student-name" autocomplete="name" required>
+
+            <label for="student-email">Email address</label>
+            <input type="email" id="student-email" autocomplete="email"
+                   pattern="[^@]+@[^@]+[.][^@]+"
+                   title="Enter a complete email address, such as student@gmail.com" required>
+
+            <label for="course">Course</label>
+            <select id="course" required>
+                <option value="">Select your course</option>
+                <option>Information Technology</option>
+                <option>Computer Science</option>
+                <option>Business Administration</option>
+                <option>Education</option>
+                <option>Other</option>
+            </select>
+
+            <label for="reason">Why do you want to join? (optional)</label>
+            <textarea id="reason" rows="4"></textarea>
+
+            <button type="submit">Submit registration</button>
+        </form>
+    </main>
+</body>
+</html>
